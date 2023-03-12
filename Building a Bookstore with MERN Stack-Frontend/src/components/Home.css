@@ -1,0 +1,22 @@
+/* .home-container {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 102, 102, 1) 0%,
+      rgba(255, 166, 0, 1) 50%,
+      rgba(255, 102, 102, 1) 100%
+    );
+    animation: gradient-animation 8s ease-in-out infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+   */
