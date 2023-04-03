@@ -1,5 +1,5 @@
 const Book = require("../model/Book");
-
+//getAllBooks - This function fetches all the books from the database using the find method and returns a JSON response containing an array of all books.
 const getAllBooks = async (req, res, next) => {
   let books;
   try {
@@ -14,6 +14,7 @@ const getAllBooks = async (req, res, next) => {
   return res.status(200).json({ books });
 };
 
+//getById - This function fetches a single book from the database by its id using the findById method and returns a JSON response containing the book.
 const getById = async (req, res, next) => {
   const id = req.params.id;
   let book;
@@ -27,6 +28,9 @@ const getById = async (req, res, next) => {
   }
   return res.status(200).json({ book });
 };
+
+//addBook - This function adds a new book to the database using the save method after creating a new instance of the Book model with the properties passed through the request body.
+//If successful, it returns a JSON response containing the added book.
 
 const addBook = async (req, res, next) => {
   const { name, author, description, price, available, image } = req.body;
@@ -51,6 +55,7 @@ const addBook = async (req, res, next) => {
   return res.status(201).json({ book });
 };
 
+//updateBook - This function updates a book in the database by its id using the findByIdAndUpdate method and returns a JSON response containing the updated book.
 const updateBook = async (req, res, next) => {
   const id = req.params.id;
   const { name, author, description, price, available, image } = req.body;
@@ -74,6 +79,7 @@ const updateBook = async (req, res, next) => {
   return res.status(200).json({ book });
 };
 
+//deleteBook - This function deletes a book from the database by its id using the findByIdAndRemove method and returns a JSON response confirming the deletion.
 const deleteBook = async (req, res, next) => {
   const id = req.params.id;
   let book;
